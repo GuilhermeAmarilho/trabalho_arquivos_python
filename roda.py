@@ -33,7 +33,11 @@ def roda():
                 nome = input("Informe o novo nome do animal: ")
                 raca = input("Informe a nova raça do animal: ")
                 data = input("Informe o novo nascimento do animal(dd-mm-yyyy): ")
-
+                animal = Cachorro(nome,raca,data)
+                animal.id = id
+                dao.alterar(animal)
+                print("Cachorro alterado com sucesso!")
+                r(0.5)
             if(a=="4"):
                 r(0.5)
                 print("Lista de todos os cachorros")
